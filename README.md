@@ -1,8 +1,11 @@
 # CodeStyleEnhancer
 
 <div align="center">
-    <img width="100%" alt="CodeStyleEnhancer" src="https://github.com/Coder2Mo/CodeStyleEnhancer/blob/main/images/icon.png">
+    <img width="500px" height="350px" alt="CodeStyleEnhancer" src="https://github.com/Coder2Mo/CodeStyleEnhancer/blob/main/images/icon.png">
 </div>
+
+<br>
+<br>
 
 This Extension serves as the implementation of a Visual Studio Code extension that provides enhanced auto-closing bracket functionality.
 The main purpose of the extension is to automatically insert closing brackets, such as parentheses, square brackets, and curly braces, as well as various types of quotes and code blocks in specific scenarios.
