@@ -1,0 +1,146 @@
+{
+    "name": "enhanced-code-formatting",
+    "displayName": "Enhanced Code Formatting",
+    "description": "Automatically adds closing brackets and formatting enhancements to your code in Visual Studio Code.",
+    "keywords": [
+        "auto-close",
+        "curly-brackets",
+        "code",
+        "programming",
+        "editor",
+        "extension",
+        "code formatting",
+        "automatic formatting",
+        "VS Code productivity",
+        "code editing",
+        "bracket completion",
+        "programming productivity",
+        "auto-formatting",
+        "developer tools",
+        "text editor enhancement",
+        "coding efficiency",
+        "code editor",
+        "auto-closing brackets",
+        "coding assistance",
+        "bracket auto-completion",
+        "VS Code extension",
+        "programming utility",
+        "developer productivity",
+        "coding efficiency",
+        "text editor extension",
+        "syntax enhancement",
+        "automatic code formatting",
+        "coding workflow",
+        "code completion",
+        "code snippets",
+        "coding shortcuts"
+    ],
+    "version": "1.0.0",
+    "publisher": "CoderMo",
+    "engines": {
+        "vscode": "^1.1.22"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onCommand:extension.autoCloseCurlyBrackets"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.goToMatchingBracket",
+                "title": "Go to Matching Bracket"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Auto Close Curly Brackets",
+            "languages": [
+                {
+                    "id": "javascript",
+                    "aliases": ["JavaScript", "javascriptreact"],
+                    "extensions": [".js", ".jsx"],
+                    "configuration": "./language-configuration.json"
+                },
+
+                {
+                    "id": "typescript",
+                    "aliases": ["TypeScript", "typescriptreact"],
+                    "extensions": [".ts", ".tsx"],
+                    "configuration": "./language-configuration.json"
+                }
+            ],
+            "activationEvents": [
+                "onCommand:extension.autoCloseCurlyBrackets"
+            ],
+
+            "properties": {
+                "autoCloseCurlyBrackets.autoCloseEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable auto-closing of curly brackets."
+                },
+                "autoCloseCurlyBrackets.userSnippet": {
+                    "type": "string",
+                    "default": "",
+                    "description": "User-defined snippet to insert after auto-closing."
+                },
+                "autoCloseBracketsEnhanced.autoIndentation": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable auto-indentation when inserting closing brackets."
+                },
+                "autoCloseBracketsEnhanced.autoCloseSmart": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable Smart Contextual Auto-Closing."
+                },
+                "autoCloseBracketsEnhanced.autoEscapeStrings": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable Intelligent String Handling (auto-escaping characters within strings)."
+                },
+                "autoCloseBracketsEnhanced.autoCloseQuotes": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable Auto-Close Quotes feature."
+                },
+                "autoCloseBracketsEnhanced.autoCloseInMarkdownCodeBlocks": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable Auto-Close In Markdown Code Blocks."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc",
+        "watch": "tsc --watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "compilerOptions": {
+        "target": "es6",
+        "types": [
+            "node",
+            "vscode"
+        ]
+    },
+    "icon": "images/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Coder2mo/auto-close-curly-brackets.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Coder2mo/auto-close-curly-brackets/issues"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.5.0",
+        "@types/vscode": "^1.81.0",
+        "eslint": "^8.47.0",
+        "typescript": "^4.3.5"
+    }
+}
