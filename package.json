@@ -131,10 +131,10 @@
     "icon": "images/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Coder2mo/auto-close-curly-brackets.git"
+        "url": "https://github.com/Coder2Mo/CodeStyleEnhancer.git"
     },
     "bugs": {
-        "url": "https://github.com/Coder2mo/auto-close-curly-brackets/issues"
+        "url": "https://github.com/Coder2Mo/CodeStyleEnhancer/issues"
     },
     "license": "MIT",
     "devDependencies": {
